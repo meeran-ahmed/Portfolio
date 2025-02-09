@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects - Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animate.css for smooth animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+        /* Custom Styles */
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            text-align: center;
+            padding-top: 80px;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #1f1f1f;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: rgb(240, 244, 242);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: rgb(254, 254, 254);
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            font-weight: bold;
+            color: #077b3f;
+        }
+
+        .projects-section {
+            margin-top: 50px;
+            padding: 40px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #1f1f1f;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .projects-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #14a76c;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .project {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #14a76c;
+        }
+
+        .project p {
+            font-size: 16px;
+            color: #ddd;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #14a76c;
+        }
+
+        .github-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #14a76c;
+            color: #121212;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .github-btn:hover {
+            background-color: #0e805c;
+            color: white;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="animate__animated animate__fadeInDown">
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="projects-section animate__animated animate__fadeInUp">
+        <h2>My Projects</h2>
+
+        <!-- Project 1 -->
+        <div class="project">
+            <h3>E-commerce Website</h3>
+            <p>An online store with user authentication, cart functionality, and payment gateway.</p>
+            <a href="https://github.com/meeran-ahmed/Topzee" class="github-btn" target="_blank">View on GitHub</a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project">
+            <h3>Hospital Management System</h3>
+            <p>A system for managing patient records, appointments, and staff details.</p>
+            <a href="https://github.com/meeran-ahmed" class="github-btn" target="_blank">View on GitHub</a>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project">
+            <h3>Pharmacy Management System</h3>
+            <p>A web app for inventory tracking, billing, and supplier management.</p>
+            <a href="https://github.com/meeran-ahmed" class="github-btn" target="_blank">View on GitHub</a>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project">
+            <h3>Medical Supply System</h3>
+            <p>A platform to track medical supplies and streamline distribution.</p>
+            <a href="https://github.com/meeran-ahmed" class="github-btn" target="_blank">View on GitHub</a>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project">
+            <h3>Library Management System</h3>
+            <p>A digital solution for book tracking, member management, and due reminders.</p>
+            <a href="https://github.com/meeran-ahmed" class="github-btn" target="_blank">View on GitHub</a>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project">
+            <h3>Voting System</h3>
+            <p>A secure online voting platform with authentication and result calculation.</p>
+            <a href="https://github.com/meeran-ahmed" class="github-btn" target="_blank">View on GitHub</a>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="project">
+            <h3>Café Website</h3>
+            <p>A visually appealing website for a café, showcasing menu, reservations, and orders.</p>
+            <a href="https://github.com/meeran-ahmed" class="github-btn" target="_blank">View on GitHub</a>
+        </div>
+
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // JavaScript for Navigation Highlight
+        document.addEventListener("DOMContentLoaded", function() {
+            const currentPage = window.location.pathname.split("/").pop();
+            const navLinks = document.querySelectorAll("nav ul li a");
+
+            navLinks.forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

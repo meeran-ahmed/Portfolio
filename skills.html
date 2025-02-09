@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills - Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animate.css for smooth animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+        /* Custom Styles */
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            text-align: center;
+            padding-top: 80px;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #1f1f1f;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color:rgb(240, 244, 242);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color:rgb(254, 254, 254);
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            font-weight: bold;
+            color: #077b3f;
+        }
+
+        .skills-section {
+            margin-top: 50px;
+            padding: 40px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #1f1f1f;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .skills-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #14a76c;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .skills-category {
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .skills-category h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #14a76c;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .skills-list span {
+            background-color: #333;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 18px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .skills-list span:hover {
+            transform: scale(1.1);
+            background-color: #14a76c;
+            color: #121212;
+            box-shadow: 0 0 10px #14a76c;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="animate__animated animate__fadeInDown">
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html" class="active">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="skills-section animate__animated animate__fadeInUp">
+        <h2>My Skills</h2>
+
+        <!-- Developer Skills -->
+        <div class="skills-category">
+            <h3>Developer Skills</h3>
+            <div class="skills-list">
+                <span>Python</span>
+                <span>Java</span>
+                <span>C</span>
+                <span>C++</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Bootstrap</span>
+                <span>JavaScript</span>
+                <span>React.js</span>
+                <span>MongoDB</span>
+                <span>MySQL</span>
+                <span>Django</span>
+            </div>
+        </div>
+
+        <!-- Video Editing Skills -->
+        <div class="skills-category">
+            <h3>Video Editing Skills</h3>
+            <div class="skills-list">
+                <span>Adobe Premiere Pro</span>
+                <span>Final Cut Pro</span>
+                <span>After Effects</span>
+                <span>DaVinci Resolve</span>
+                <span>Color Grading</span>
+                <span>Motion Graphics</span>
+                <span>Video Transitions</span>
+            </div>
+        </div>
+
+        <!-- Content Creation Skills -->
+        <div class="skills-category">
+            <h3>Content Creation Skills</h3>
+            <div class="skills-list">
+                <span>Script Writing</span>
+                <span>Storytelling</span>
+                <span>SEO Optimization</span>
+                <span>Thumbnail Designing</span>
+                <span>Social Media Growth</span>
+                <span>Branding</span>
+                <span>Content Strategy</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // JavaScript for Navigation Highlight
+        document.addEventListener("DOMContentLoaded", function() {
+            const currentPage = window.location.pathname.split("/").pop();
+            const navLinks = document.querySelectorAll("nav ul li a");
+
+            navLinks.forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
